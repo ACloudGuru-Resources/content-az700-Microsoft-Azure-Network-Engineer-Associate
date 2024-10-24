@@ -231,6 +231,10 @@
         "[resourceId('Microsoft.Network/virtualNetworks', variables('hubVNetName'))]"
       ],
       "properties": {
+        "sku": {
+          "name": "AZFW_VNet",
+          "tier": "Basic"
+        },
         "ipConfigurations": "[variables('azureFirewallIpConfigurations')]",
         "managementIpConfiguration": {
           "name": "mngipconf",
