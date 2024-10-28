@@ -36,9 +36,9 @@ az network vnet create --name spoke1-vnet --resource-group $rg --location $locat
 
 # Create Gateway subnets
 
-az network vnet subnet create -g $rg --vnet-name hub-vnet -n GatewaySubnet --address-prefix 10.0.2.0/27
+az network vnet subnet create -g $rg --vnet-name hub-vnet -n GatewaySubnet --address-prefix 10.0.0.0/27
 
-az network vnet subnet create -g $rg --vnet-name spoke1-vnet -n GatewaySubnet --address-prefix 10.1.2.0/27
+az network vnet subnet create -g $rg --vnet-name spoke1-vnet -n GatewaySubnet --address-prefix 10.1.0.0/27
 
 # Create two Linux machines. One in each network
 
