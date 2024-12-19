@@ -30,9 +30,9 @@ $location = az group list --query '[].location' -o tsv
 
 # Create Virtual Networks and subnets
 
-az network vnet create --name hub-vnet --resource-group $rg --location $location --address-prefixes 10.0.0.0/16 --subnet-name hub-subnet-a --subnet-prefix 10.0.1.0/24 --subnet-name GatewaySubnet --subnet-prefix 10.0.2.0/27
+az network vnet create --name hub-vnet --resource-group $rg --location $location --address-prefixes 10.0.0.0/16 --subnet-name hub-subnet-a --subnet-prefix 10.0.1.0/24
 
-az network vnet create --name spoke1-vnet --resource-group $rg --location $location --address-prefixes 10.1.0.0/16 --subnet-name spoke-1-subnet-a --subnet-prefix 10.1.1.0/24 --subnet-name GatewaySubnet --subnet-prefix 10.1.2.0/27
+az network vnet create --name spoke1-vnet --resource-group $rg --location $location --address-prefixes 10.1.0.0/16 --subnet-name spoke-1-subnet-a --subnet-prefix 10.1.1.0/24
 
 # Create Gateway subnets
 
